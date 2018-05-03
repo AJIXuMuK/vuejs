@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "vue-simple-wp-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/vueSimpleWp/VueSimpleWpWebPart.js",
+          "manifest": "./src/webparts/vueSimpleWp/VueSimpleWpWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "VueSimpleWpWebPartStrings": "lib/webparts/vueSimpleWp/loc/{locale}.js"
+  }
+}
