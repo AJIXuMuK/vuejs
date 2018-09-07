@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "proppane-control-client-side-solution",
+    "id": "ca8cb07b-754a-4da3-bcf8-afe1f6c044ba",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true
+  },
+  "paths": {
+    "zippedPackage": "solution/proppane-control.sppkg"
+  }
+}
