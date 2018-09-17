@@ -4,7 +4,7 @@ import { ReactComponent } from '../ReactComponent/ReactComponent';
 import { WebPartTitle } from "@pnp/spfx-controls-react/lib/WebPartTitle";
 import { PrimaryButton } from 'office-ui-fabric-react/lib/Button';
 import { DisplayMode } from '@microsoft/sp-core-library';
-import { ReactComponent as ReactComponentDecorator } from '../../../../utils/ReactComponentsDecorator';
+import { ReactComponent as ReactComponentDecorator } from '../../../../utils/ReactComponentDecorator';
 import { VuePlugin, ReactInVue } from 'vuera';
 /**
  * Component's properties
