@@ -5,7 +5,7 @@ import { WebPartTitle } from "@pnp/spfx-controls-react/lib/WebPartTitle";
 import { PrimaryButton } from 'office-ui-fabric-react/lib/Button';
 import { DisplayMode } from '@microsoft/sp-core-library';
 import { ReactComponent as ReactComponentDecorator } from '../../../../utils/ReactComponentsDecorator';
-import { VuePlugin } from 'vuera';
+import { VuePlugin, ReactInVue } from 'vuera';
 /**
  * Component's properties
  */
@@ -25,7 +25,13 @@ Vue.use(VuePlugin);
 /**
  * Class-component
  */
-@Component
+@Component({
+    components: {
+        'react-component': ReactInVue(ReactComponent),
+        'web-part-title': ReactInVue(WebPartTitle),
+        'primary-button': ReactInVue(PrimaryButton)
+    }
+})
 export default class ReactInVueWebPart extends Vue implements IReactInVueWebPartProps {
 
     /**
@@ -53,20 +59,20 @@ export default class ReactInVueWebPart extends Vue implements IReactInVueWebPart
     /**
      * Vue component from custom component
      */
-    @ReactComponentDecorator(ReactComponent, 'react-component')
-    public reactComponent: ReactComponent;
+    //@ReactComponentDecorator(ReactComponent, 'react-component')
+    //public reactComponent: ReactComponent;
 
     /**
      * Vue compoenent from SPFx Reusable React controls repo
      */
-    @ReactComponentDecorator(WebPartTitle, 'web-part-title')
-    public webPartTitle: WebPartTitle;
+    //@ReactComponentDecorator(WebPartTitle, 'web-part-title')
+    //public webPartTitle: WebPartTitle;
 
     /**
      * Vue compoenent from Office UI Fabric Primary Buttom
      */
-    @ReactComponentDecorator(PrimaryButton, 'primary-button')
-    public primaryButton: PrimaryButton;
+    //@ReactComponentDecorator(PrimaryButton, 'primary-button')
+    //public primaryButton: PrimaryButton;
 
     /**
      * Readonly property to return styles
