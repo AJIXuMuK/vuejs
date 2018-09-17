@@ -1,0 +1,17 @@
+{
+  "generator-vuespfx": {
+    "environment": "spo",
+    "componentType": "webpart"
+  },
+  "@microsoft/generator-sharepoint": {
+    "environment": "spo",
+    "componentType": "webpart",
+    "framework": "none",
+    "componentName": "ReactInVue",
+    "isCreatingSolution": true,
+    "version": "1.6.0",
+    "libraryName": "react-in-vue",
+    "libraryId": "4e5077a3-714b-4007-be48-f224796878b7",
+    "packageManager": "npm"
+  }
+}
