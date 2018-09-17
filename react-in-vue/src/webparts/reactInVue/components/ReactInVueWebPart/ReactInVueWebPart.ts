@@ -48,14 +48,6 @@ export default class ReactInVueWebPart extends Vue implements IReactInVueWebPart
     @Prop()
     public onTitleChanged: (vaule: string) => void;
 
-    public data(): any {
-        return {
-            reactComponent: ReactComponent,
-            webPartTitle: WebPartTitle,
-            primaryButton: PrimaryButton
-        };
-    }
-
     /**
      * Vue component from custom component
      */
