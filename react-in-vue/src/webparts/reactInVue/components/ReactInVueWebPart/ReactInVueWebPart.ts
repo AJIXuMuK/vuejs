@@ -46,7 +46,7 @@ export default class ReactInVueWebPart extends Vue implements IReactInVueWebPart
     @Prop()
     public onButtonClicked: () => void;
     @Prop()
-    public onTitleChanged: (vaule: string) => void;
+    public onTitleChanged: (value: string) => void;
 
     /**
      * Vue component from custom component
