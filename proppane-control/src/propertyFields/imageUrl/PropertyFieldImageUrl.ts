@@ -1,8 +1,6 @@
 import { IPropertyPaneField, PropertyPaneFieldType } from '@microsoft/sp-webpart-base';
 import { IPropertyFieldImageUrlProps, IPropertyFieldImageUrlPropsInternal } from './IPropertyFieldImageUrl';
 
-import styles from './PropertyFieldImageUrl.module.scss';
-
 // Importing Vue.js
 import Vue from 'vue';
 // Improting Vue.js SFC
@@ -51,7 +49,6 @@ class PropertyFieldImageUrlBuilder implements IPropertyPaneField<IPropertyFieldI
         const id: string = `ppf-${this.properties.key}`;
 
         elem.innerHTML = '';
-        elem.className = styles.ImageUrl;
 
         // root div element of the control
         const element: HTMLDivElement = document.createElement('div');
