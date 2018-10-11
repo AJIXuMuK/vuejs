@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue.js simple page</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue/dist/vue.js">
+    </script>
+    <div id="app">
+        <simple-component 
+            passed-param="Message from Root">
+        </simple-component>
+    </div>
+    <script type="text/javascript">
+        Vue.component('simple-component', {
+
+            props: {
+                passedParam: String
+            },
+
+            data: function () {
+                return {
+                    message: ''
+                }
+            },
+
+            methods: {
+                onClick: function () {
+                    alert('Button clicked!');
+                }
+            },
+
+            template: `<div>
+                <div>
+                    <input type="text" v-model="message" />
+                    <div>Message is {{message}}; passed param is {{passedParam}}</div>
+                </div>
+                <input type="button" @click="onClick" value="Click Me!" />
+            </div>`
+
+        });
+        var vm = new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+
+</html>
