@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue.js simple page</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue/dist/vue.js">
+    </script>
+    <div id="app">
+        <div>
+            {{methodAsExpression()}}
+        </div>
+        <input type="button" @click="onButtonClick" value="Click Me!" />
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello from Vue!'
+            },
+            methods: {
+                onButtonClick: function(event) {
+                    alert('Button has been clicked');
+                },
+                methodAsExpression: function() {
+                    return `this text is from method. ${this.$data.message}`;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

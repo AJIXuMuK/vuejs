@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue.js simple page</title>
+    <style>
+        .gray {
+            background-color: rgb(230, 230, 230);
+        }
+        .hiddenSection {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue/dist/vue.js">
+    </script>
+    <div id="app">
+        <input type="text" v-model="message" />
+        <div>
+            Message is: {{message}}
+        </div>
+        <input type="checkbox" v-model="showSection"><span>&nbsp;Show hidden section</span><br />
+        <div v-if="showSection" :class="{gray: isGray}" class="hiddenSection">
+            This section is hidden until "Show hidden section" is checked.<br />
+            <a v-bind:href="url" target="_blank">Vue.js</a><br />
+            <input type="checkbox" v-model="expressions"><span>&nbsp;expressions</span><br />
+            <span>expressions checkbox is {{expressions ? 'checked' : 'unchecked'}}</span>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: '',
+                showSection: false,
+                url: 'http://vuejs.org',
+                expressions: false,
+                isGray: false
+            }
+        });
+
+        setInterval(() => {
+            vm.isGray = !vm.isGray;
+        }, 5000);
+    </script>
+</body>
+
+</html>
